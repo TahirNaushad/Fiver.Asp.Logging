@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Fiver.Asp.Logging
@@ -26,5 +20,15 @@ namespace Fiver.Asp.Logging
                 })
                 .UseStartup<Startup>()
                 .Build();
+
+        //public static IWebHost BuildWebHost(string[] args) =>
+        //    WebHost.CreateDefaultBuilder(args)
+        //        .ConfigureLogging((context, builder) =>
+        //        {
+        //            builder.AddConsole();
+        //            builder.AddDebug();
+        //        })
+        //        .UseStartup<Startup>()
+        //        .Build();
     }
 }

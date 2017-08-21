@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Fiver.Asp.Logging
 {
@@ -14,8 +13,7 @@ namespace Fiver.Asp.Logging
 
         public void Configure(
             IApplicationBuilder app, 
-            IHostingEnvironment env,
-            ILoggerFactory loggerFactory)
+            IHostingEnvironment env)
         {
             app.UseHelloLogging();
         }
