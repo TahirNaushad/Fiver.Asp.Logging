@@ -19,6 +19,11 @@ namespace Fiver.Asp.Logging
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging((context, builder) =>
+                {
+                    builder.AddFilter((category, level) =>
+                                category.Contains("Fiver.Asp.Logging.HelloLoggingMiddleware"));
+                })
                 .UseStartup<Startup>()
                 .Build();
     }
